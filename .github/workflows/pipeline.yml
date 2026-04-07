@@ -61,7 +61,7 @@ jobs:
             ${{ steps.meta.outputs.image_name }}:sha-${{ steps.meta.outputs.short_sha }}
 
       - name: Run Trivy scan
-        uses: aquasecurity/trivy-action@0.24.0
+        uses: aquasecurity/trivy-action@0.35.0
         with:
           image-ref: ${{ steps.meta.outputs.image_name }}:sha-${{ steps.meta.outputs.short_sha }}
           format: table

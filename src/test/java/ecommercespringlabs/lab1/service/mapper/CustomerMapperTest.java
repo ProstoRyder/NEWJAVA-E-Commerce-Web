@@ -5,14 +5,12 @@ import ecommercespringlabs.lab1.dto.customer.CustomerResponseDto;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-@SpringBootTest
 public class CustomerMapperTest {
     private final CustomerMapper customerMapper = Mappers.getMapper(CustomerMapper.class);
 

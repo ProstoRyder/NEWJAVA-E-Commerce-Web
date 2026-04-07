@@ -2,6 +2,7 @@ package ecommercespringlabs.lab1.web;
 
 
 
+import ecommercespringlabs.lab1.AbstractIt;
 import ecommercespringlabs.lab1.featureToggle.FeatureToggles;
 import ecommercespringlabs.lab1.service.featuretoggle.FeatureToggleExtension;
 import ecommercespringlabs.lab1.service.featuretoggle.annotation.DisabledFeatureToggle;
@@ -19,7 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 @SpringBootTest
 @ExtendWith(FeatureToggleExtension.class)
-public class CosmoCatsControllerTestIT {
+public class CosmoCatsControllerTestIT extends AbstractIt {
     @Autowired
     private MockMvc mockMvc;
 

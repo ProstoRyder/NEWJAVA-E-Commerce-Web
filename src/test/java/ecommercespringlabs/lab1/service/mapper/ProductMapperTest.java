@@ -8,8 +8,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;
 import org.mockito.Mock;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 
 import java.util.List;
 import java.util.UUID;
@@ -17,11 +15,9 @@ import java.util.UUID;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-@SpringBootTest
 public class ProductMapperTest {
     private final ProductMapper productMapper = Mappers.getMapper(ProductMapper.class);
 
-    @MockBean
     private Product product;
     private List<Product> productList;
     @Mock

@@ -5,13 +5,11 @@ import ecommercespringlabs.lab1.dto.category.CategoryResponseDto;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;
-import org.springframework.boot.test.context.SpringBootTest;
 import java.util.List;
 import java.util.UUID;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-@SpringBootTest
 public class CategoryMapperTest {
     private final CategoryMapper categoryMapper = Mappers.getMapper(CategoryMapper.class);
 

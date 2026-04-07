@@ -9,7 +9,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;
 import org.mockito.Mock;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 import java.util.UUID;
@@ -17,7 +16,6 @@ import java.util.UUID;
 import static ecommercespringlabs.lab1.common.OrderStatus.COMPLETED;
 import static org.junit.Assert.*;
 
-@SpringBootTest
 public class OrderMapperTest {
 
     private final OrderMapper orderMapper = Mappers.getMapper(OrderMapper.class);

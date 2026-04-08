@@ -1,0 +1,34 @@
+name: Lab 3 Grading
+
+on:
+  push:
+    branches:
+      - lab3
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Create KinD cluster
+        uses: helm/kind-action@v1.12.0
+        with:
+          cluster_name: lab3
+
+      - name: Build application image
+        run: docker build -t ecommerce-app:lab3 .
+
+      - name: Load image into KinD
+        run: kind load docker-image ecommerce-app:lab3 --name lab3
+
+      - name: Apply Kubernetes manifests
+        run: kubectl apply -f k8s/
+
+      - name: Run Master Validation Script
+        run: |
+          chmod +x ./tests/lab3_test.sh
+          ./tests/lab3_test.sh
